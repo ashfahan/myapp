@@ -5,7 +5,7 @@ import { INode } from "../interfaces/Tree.interface";
 
 export const TreeContainer = () => {
   const treedata = useStore((state) => state.Tree);
-  const [search, setSearch] = useState("Cabbage");
+  const [search, setSearch] = useState("");
 
   const searchNode = (value: string, nodes: INode[]): INode[] => {
     const node = nodes.map((node) => {

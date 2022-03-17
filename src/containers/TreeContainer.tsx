@@ -18,9 +18,11 @@ export const TreeContainer = () => {
   };
 
   const filterData = useMemo(() => {
+    const textToFind = search.trim();
     let result = treedata;
-    if (Array.isArray(treedata)) {
-      const found = searchNode(search, treedata);
+
+    if (textToFind && Array.isArray(treedata)) {
+      const found = searchNode(textToFind, treedata);
       if (!!found.length) result = found;
     }
     return result;

@@ -4,7 +4,7 @@ import { INode } from "../interfaces/Tree.interface";
 import Branch from "./Branch";
 
 interface Props<T = INode> {
-  data: T[] | T;
+  data: T[];
 }
 
 const Tree: React.FC<Props> = (props) => {
@@ -18,11 +18,9 @@ const Tree: React.FC<Props> = (props) => {
         </span>
         Tree Data
       </div>
-      {Array.isArray(data) ? (
-        data.map((item) => <Branch key={item.id} item={item} />)
-      ) : (
-        <Branch key={data.id} item={data} />
-      )}
+      {data.map((item) => (
+        <Branch expanded={item.expanded} key={item.id} item={item} />
+      ))}
     </div>
   );
 };

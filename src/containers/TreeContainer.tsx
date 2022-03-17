@@ -21,7 +21,7 @@ export const TreeContainer = () => {
     let result = treedata;
     if (Array.isArray(treedata)) {
       const found = searchNode(search, treedata);
-      if (found) result = found;
+      if (!!found.length) result = found;
     }
     return result;
   }, [search, treedata]);

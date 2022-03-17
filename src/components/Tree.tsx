@@ -12,6 +12,12 @@ const Tree: React.FC<Props> = (props) => {
 
   return (
     <div className="Tree relative">
+      <div className="pl-1">
+        <span className="p-2 text-primary-500 bg-slate-600 inline-flex rounded-lg mb-2 mr-2">
+          <i className="icon ri-git-merge-line" />
+        </span>
+        Tree Data
+      </div>
       {Array.isArray(data) ? (
         data.map((item) => <Branch key={item.id} item={item} />)
       ) : (

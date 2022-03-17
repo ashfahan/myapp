@@ -3,7 +3,7 @@ import { InitialTree } from "../constant";
 import { INode } from "../interfaces/Tree.interface";
 
 interface StoreState {
-  Tree: INode[] | INode;
+  Tree: INode[];
   selectedNode?: INode;
 }
 

@@ -16,9 +16,11 @@ export const TreeField = () => {
         rows={10}
         onKeyUp={({ target }) => {
           try {
-            const data: INode[] | INode = JSON.parse((target as HTMLTextAreaElement).value);
-            if (data) setTree(data);
-            setError(false);
+            const data: INode[] = JSON.parse((target as HTMLTextAreaElement).value);
+
+            if (!Array.isArray(data) || !data) throw new Error("invalid data");
+
+            setTree(data);
           } catch (error) {
             setError(true);
           }

@@ -42,3 +42,34 @@ img {
   padding: 0;
   line-height: 1;
 }
+
+.Branch {
+  > .flex {
+    .Lnode {
+      @apply hidden;
+    }
+    .Tnode {
+      @apply block;
+    }
+  }
+
+  &:last-child {
+    > .flex {
+      .Lnode {
+        @apply block;
+      }
+      .Tnode {
+        @apply hidden;
+      }
+    }
+  }
+}
+
+.Tree > .Branch {
+  > div {
+    border-left-width: 0 !important;
+  }
+  &::after {
+    margin-left: 0 !important;
+  }
+}

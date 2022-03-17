@@ -9,9 +9,8 @@ export const TreeContainer = () => {
 
   const searchNode = (value: string, nodes: INode[]): INode[] => {
     const node = nodes.map((node) => {
-      if (node.attributes.label.toLowerCase().includes(value.toLowerCase())) return node;
+      if (new RegExp(value, "gi").test(node.attributes.label)) return node;
       if (node.children) return searchNode(value, node.children)?.length ? node : undefined;
-      return undefined;
     });
 
     return node.filter(Boolean) as INode[];

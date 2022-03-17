@@ -1,6 +1,5 @@
 import React from "react";
 import { INode } from "../interfaces/Tree.interface";
-
 import Branch from "./Branch";
 
 interface Props<T = INode> {
@@ -19,7 +18,7 @@ const Tree: React.FC<Props> = (props) => {
         Tree Data
       </div>
       {data.map((item) => (
-        <Branch expanded={item.expanded} key={item.id} item={item} />
+        <Branch expand={!!item.expanded} key={item.id}  item={item} />
       ))}
     </div>
   );

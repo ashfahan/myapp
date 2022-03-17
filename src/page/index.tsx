@@ -8,7 +8,7 @@ export const Home = () => {
       <div className="column w-3/12 bg-slate-900 p-4">
         <TreeContainer />
       </div>
-      <div className="column p-4 bg-white text-black">
+      <div data-theme="light" className="column p-4 bg-white text-black">
         <TreeField />
       </div>
       <div className="column w-3/12 bg-slate-900 p-4">

@@ -5,35 +5,3 @@
 @import "remixicon/fonts/remixicon.css";
 
 @tailwind utilities;
-
-.Branch {
-  > .flex {
-    .Lnode {
-      @apply hidden;
-    }
-    .Tnode {
-      @apply block;
-    }
-  }
-
-  &:last-child {
-    > .flex {
-      .Lnode {
-        @apply block;
-      }
-      .Tnode {
-        @apply hidden;
-      }
-    }
-  }
-}
-
-.Tree > .Branch {
-  > div {
-    padding-left: 0 !important;
-    border-left-width: 0 !important;
-  }
-  &::after {
-    margin-left: 0 !important;
-  }
-}

@@ -12,7 +12,7 @@ export const TreeField = () => {
       <div className="mb-2">Enter a valid Json Node below:</div>
       <textarea
         cols={30}
-        className="input w-full is-white"
+        className="textarea w-full textarea-bordered"
         rows={10}
         onKeyUp={({ target }) => {
           try {
